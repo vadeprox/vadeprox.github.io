@@ -1,15 +1,97 @@
 <html>
 <head>
+<style>
+
+body {
+	background-color: #e3e3e3;
+}
+
+input {
+	background-color: #fff;
+	width: 20%;
+	padding: 6px 12px;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin: 2px 0px;
+	height: 40px;
+	font-size: 15;
+}
+
+button { 
+	background-color: #fff;
+	width: 20%;
+	padding: 6px 12px;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin: 2px 0px;
+	height: 35px;
+	font-size: 13;
+}
+
+button:hover {
+	background-color: #ededed;
+	transition-duration: 0.1s;
+}
+
+code {
+	font-size: 16
+}
+
+#result { 
+	height: 10%;
+	width: 40%;
+}
+
+</style>
 <title>
 Online Calculator
 </title>
 </head>
 <body>
+<center>
 
-Money: 
-<input>
-ee
-</input>
+<script>
+	function Start() {
+		var Level = document.getElementById("level").value
+		var Money = document.getElementById("money").value
+		var Gold = document.getElementById("gold").value
+		var BlackBoxes = document.getElementById("blackboxes").value
+		var SkillPoints = document.getElementById("skillpoints").value
+		document.getElementById("result").value = btoa(Level + "," + Money + "," + Gold + ",2,0,0,0,0,0,0,0,1,1,0,43595.78,999999,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0," + BlackBoxes + ",0,0,0,1," + SkillPoints + ",1,0,0")
+	}
+</script>
 
+<input id="level" type="number" placeholder="Put Level Here" size="5px">
+
+<br>
+
+<input id="money" type="number" placeholder="Put Money Here">
+
+<br>
+
+<input id="gold" type="number" placeholder="Put Gold Here">
+
+<br>
+
+<input id="blackboxes" type="number" placeholder="Put Black Boxes Here">
+
+<br>
+
+<input id="skillpoints" type="number" placeholder="Put SkillPoints Here">
+
+
+<br>
+
+<button onclick="Start()">
+Encode to Base64
+</button>
+
+<br><br>
+
+<input type="Text" id="result" placeholder="Result Will Appear Here">
+
+</center>
 </body>
 </html>
